@@ -1,0 +1,19 @@
+[package]
+name = "void-launcher"
+version = "0.1.0"
+description = "VOID Minecraft Launcher"
+authors = ["VOID"]
+edition = "2021"
+
+[lib]
+name = "void_launcher_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+
+[target.'cfg(not(any(target_os = "android", target_os = "ios")))'.dependencies]
+tauri-plugin-updater = "2"

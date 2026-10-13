@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "VOID Launcher",
+  "version": "0.1.0",
+  "identifier": "dev.voidlauncher.app",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "VOID Launcher",
+        "width": 1240,
+        "height": 800,
+        "minWidth": 950,
+        "minHeight": 680,
+        "backgroundColor": "#0b0a12"
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "nsis"
+    ],
+    "shortDescription": "VOID Minecraft Launcher",
+    "category": "Game",
+    "icon": [
+      "icon.ico",
+      "icon.png"
+    ]
+  },
+  "plugins": {
+    "updater": {
+      "requireSignedVersion": true
+    }
+  }
+}

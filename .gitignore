@@ -1,0 +1,32 @@
+# Node.js
+node_modules/
+dist/
+.vite/
+*.log
+
+# Rust / Tauri
+src-tauri/target/
+target/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.pfx
+*.p12
+*.secret
+*.token
+
+# IDE
+.vscode/
+.idea/
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
